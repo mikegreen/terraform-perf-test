@@ -7,7 +7,6 @@ provider "vault" {
 module "dev3" {
   source       = "./modules/dev/"
   zone         = "dev3"
-  dependencies = ["${vault_generic_endpoint.plugin_utoken.id}"]
   providers = {
     vault.zone = vault.dev3
     vault.root = vault.root
