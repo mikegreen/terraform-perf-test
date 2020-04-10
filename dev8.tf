@@ -1,14 +1,14 @@
 provider "vault" {
   address   = var.input.vault-address
-  namespace = "dev5"
-  alias     = "dev5"
+  namespace = "dev8"
+  alias     = "dev8"
 }
 
-module "dev5" {
+module "dev8" {
   source = "./modules/dev/"
-  zone   = "dev5"
+  zone   = "dev8"
   providers = {
-    vault.zone = vault.dev5
+    vault.zone = vault.dev8
     vault.root = vault.root
     null       = null
   }

@@ -6,8 +6,8 @@ locals {
   }
 
   // A map found by personnel group and personnel
-  auth-group-map    = merge(flatten([local.auth-group-map-temp])...)
-  auth-distinct-personnel     = toset(distinct(flatten(values(local.auth-group-map))))
+  auth-group-map          = merge(flatten([local.auth-group-map-temp])...)
+  auth-distinct-personnel = toset(distinct(flatten(values(local.auth-group-map))))
 }
 
 resource "vault_identity_entity" "personnel" {

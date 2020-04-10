@@ -6,14 +6,14 @@ locals {
   }
 
   // A map found by personnel group and personnel
-  auth-group-map    = merge(flatten([local.auth-group-map-temp])...)
-  auth-distinct-personnel     = toset(distinct(flatten(values(local.auth-group-map))))
+  auth-group-map          = merge(flatten([local.auth-group-map-temp])...)
+  auth-distinct-personnel = toset(distinct(flatten(values(local.auth-group-map))))
 }
 
 resource "vault_identity_entity" "personnel" {
-  provider       = vault.root
-  for_each   = local.auth-distinct-personnel
-  name       = each.value
+  provider = vault.root
+  for_each = local.auth-distinct-personnel
+  name     = each.value
   metadata = {
     email = each.value
   }
