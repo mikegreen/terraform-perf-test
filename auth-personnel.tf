@@ -2,7 +2,7 @@
 locals {
   auth-group-map-temp = {
     for f in fileset("${path.module}/onboarding", "**/*personnel.users") :
-    basename(f) => compact(split("\n", file("${path.module}/onboarding/${f}")))
+    basename("${f}") => compact(split("\n", file("${path.module}/onboarding/${f}")))
   }
 
   // A map found by personnel group and personnel

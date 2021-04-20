@@ -1,21 +1,10 @@
-terraform {
-  required_providers {
-    vault = {
-      source  = "hashicorp/vault"
-      version = "~> 2.0"
-    }
-    null = {
-      version = "~> 2.1"
-    }
-  }
-}
-
 provider "vault" {
-  address = var.vault_address
-  // token     = var.vault_token
+  version   = "~> 2.9.0"
+  address   = var.input.vault-address
   namespace = ""
   alias     = "root"
 }
 
 provider "null" {
+  version = "~> 2.1"
 }
