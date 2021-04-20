@@ -5,7 +5,7 @@ provider "vault" {
 
 module "dev2" {
   source = "./modules/dev/"
-  zone   = "dev2"
+  zone   = "dev2b"
   providers = {
     vault.zone = vault.dev2
     vault.root = vault.root
