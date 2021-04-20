@@ -1,5 +1,4 @@
 provider "vault" {
-  address   = var.input.vault-address
   namespace = "dev4"
   alias     = "dev4"
 }
