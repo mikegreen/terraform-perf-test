@@ -3,7 +3,7 @@ resource "vault_jwt_auth_backend" "auth-jwt" {
   path               = "jwt"
   type               = "jwt"
   bound_issuer       = "spiffe://spiffy.test.xyz"
-  jwks_url           = "https://testbucket.storage.googleapis.com/jwks.json"
+  jwks_url           = "https://hashicorp.auth0.com/.well-known/jwks.json"
   jwt_supported_algs = ["ES256"]
   default_role       = "vault_via_terraform"
   tune {
