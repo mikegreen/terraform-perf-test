@@ -14,7 +14,8 @@ resource "vault_identity_entity" "personnel" {
   provider   = vault.zone
   depends_on = [vault_namespace.zone]
   for_each   = local.auth-distinct-personnel
-  name       = each.value
+  //name       = var.testFile
+  name = each.value
   metadata = {
     email = each.value
   }

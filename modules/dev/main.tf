@@ -15,3 +15,4 @@ resource "vault_namespace" "zone" {
   provider = vault.root
   path     = var.zone
 }
+

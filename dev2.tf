@@ -11,4 +11,5 @@ module "dev2" {
     vault.root = vault.root
     null       = null
   }
+  testFile = data.local_file.sample_text.content
 }

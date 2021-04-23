@@ -6,7 +6,7 @@ resource "vault_jwt_auth_backend" "auth-jwt" {
   bound_issuer       = "spiffe://usso.upki.ca"
   jwks_url           = "https://hashicorp.auth0.com/.well-known/jwks.json"
   jwt_supported_algs = ["ES256"]
-  default_role       = "crane"
+  default_role       = "herring"
   tune {
     default_lease_ttl = "1h"
     max_lease_ttl     = "768h"
