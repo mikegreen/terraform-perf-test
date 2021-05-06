@@ -3,6 +3,7 @@ terraform {
     vault = {
       source  = "hashicorp/vault"
       version = "~> 2.0"
+      configuration_aliases = [vault.root, vault.dev1, vault.zone]
     }
     null = {
       version = "~> 2.1"
@@ -16,6 +17,7 @@ provider "vault" {
   namespace = ""
   alias     = "root"
 }
+
 
 provider "null" {
 }
