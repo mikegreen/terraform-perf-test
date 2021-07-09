@@ -11,3 +11,8 @@ variable "testFile" {
   type    = string
   default = "foo"
 }
+
+variable "testFile99mb" {
+  type    = string
+  default = "foo"
+}

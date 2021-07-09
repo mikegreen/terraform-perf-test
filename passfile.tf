@@ -2,3 +2,7 @@
 data "local_file" "sample_text" {
   filename = "./1mb.txt"
 }
+
+data "local_file" "sample_text_99" {
+  filename = "./99mb.txt"
+}
